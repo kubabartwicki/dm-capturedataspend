@@ -19,10 +19,10 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-full">
-      {% if status == 'ongoing' %}
+      {% if status == 'done' or status == 'ongoing' %}
       <div class="banner-success-without-action">
           <p class="banner-message">
-            With plain text.
+            We updated your outcome.
           </p>
       </div>
       {% endif %}
@@ -76,6 +76,7 @@
           <p class="instruction-list-item-top">
             <a class="button" href="/did-you-award" role="button">Tell us the outcome</a>
           </p>
+          
         </li>
       
         <li class="instruction-list-item divider">  

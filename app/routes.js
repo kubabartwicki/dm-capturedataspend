@@ -4,7 +4,6 @@ var router = express.Router()
 module.exports = router
 router.post('/did-you-award', function (req, res) {
   var radiogroup = req.body.radiogroup
-  console.log('award_status: ' + radiogroup)
   if (radiogroup == 'yes') {
     res.redirect('/award-info')
   } else if (radiogroup == 'no') {
@@ -14,18 +13,14 @@ router.post('/did-you-award', function (req, res) {
   }
 })
 
-
-// Route index page
 router.get('/', function (req, res) {
   res.render('index')
 })
-// add your routes here
 router.get('/saved-searches', function (req, res) {
   res.render('saved-searches')
 })
 router.get('/search-summary', function (req, res) {
-  var status = req.query.status
-  res.render('search-summary')
+  res.render('search-summary', {status: req.query.status})
 })
 router.get('/did-you-award', function (req, res) {
   res.render('did-you-award')
