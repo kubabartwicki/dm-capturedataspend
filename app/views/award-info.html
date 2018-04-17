@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Award info
+{% endblock %}
+
+{% block after_header %}
+<div id="global-breadcrumb" class="header-context">
+      <nav>
+        <ol class="group" role="breadcrumbs">
+            <li><a href="/">Digital Marketplace</a></li>
+            <li><a href="/">Your account</a></li>
+            <li><a href="/saved-searches">Your saved searches</a></li>
+            <li><a href="/search-summary">Buying some hosting</a></li>
+        </ol>
+      </nav>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Which service won the contract?
+      </h1>
+    </div>
+  </div>
+  <div class="grid-row direct-award-project-overview-page">
+    <div class="column-two-thirds">
+      <form action="/search-summary" method="get">
+        <div class="form-group">
+          <fieldset>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radiogroup" value="Amazon Simple Notification Service (Amazon SNS)">
+              <label for="radio-1">
+                Amazon Simple Notification Service (Amazon SNS)
+                <span class="form-hint">Amazon web service</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radiogroup" value="MatsSoft: MATS PaaS">
+              <label for="radio-2">
+                MatsSoft: MATS PaaS
+                <span class="form-hint">MatsSoft Limited</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radiogroup" value="Hosted Desktop / Desktop as a Service (DaaS) / Desktop Virtualisation">
+              <label for="radio-3">
+                Hosted Desktop / Desktop as a Service (DaaS) / Desktop Virtualisation
+                <span class="form-hint">ClevaGroup Ltd</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-4" type="radio" name="radiogroup" value="KARMA™ - Managed Services">
+              <label for="radio-4">
+                KARMA™ - Managed Services
+                <span class="form-hint">Khipu Networks Limited</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-5" type="radio" name="radiogroup" value="ONI Nimbus UC - Unified Communications as a Service (UCaaS)">
+              <label for="radio-5">
+                ONI Nimbus UC - Unified Communications as a Service (UCaaS)
+                <span class="form-hint">ONI plc</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-6" type="radio" name="radiogroup" value="Fordway Cloud Backup and Recovery Service">
+              <label for="radio-6">
+                Fordway Cloud Backup and Recovery Service
+                <span class="form-hint">Fordway</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-7" type="radio" name="radiogroup" value="Compute Cloud (Open Telekom Cloud) PAAS">
+              <label for="radio-7">
+                Compute Cloud (Open Telekom Cloud) PAAS
+                <span class="form-hint">T-Systems Limited</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-8" type="radio" name="radiogroup" value="Compute Cloud (Open Telekom Cloud) IAAS">
+              <label for="radio-8">
+                Compute Cloud (Open Telekom Cloud) IAAS
+                <span class="form-hint">T-Systems Limited</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+      <a href="/award-details" class="button">Continue</a>
+      <p class="return-to-overview">
+        <a href="/search-summary">Return to overview</a>
+      </p> 
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

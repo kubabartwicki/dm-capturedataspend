@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your account
+{% endblock %}
+
+{% block after_header %}
+<div id="global-breadcrumb" class="header-context">
+      <nav>
+        <ol class="group" role="breadcrumbs">
+            <li><a href="/">Digital Marketplace</a></li>
+        </ol>
+      </nav>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  	<div class="grid-row">
+	    <div class="column-two-thirds">
+	      <h1 class="heading-xlarge">
+	      	<span class="heading-secondary">19490@user.marketplace.team</span>
+	        Test user
+	      </h1>
+	    </div>
+	</div>
+    <div class="grid-row">
+    	<div class="column-two-thirds dm-account-overview-options">
+    	    <div class="dmspeak">
+    	      <h2 class="heading-xmedium">Cloud hosting, software and support</h2>
+    	      <p style="margin-bottom:0;">You have 1 incomplete search</p>
+    	      <p><a href="/saved-searches">View your saved searches</a><br></p>
+    	      <h2 class="heading-xmedium">Digital outcomes, specialists and user research participants</h2>
+    	      <p>You don't have any requirements</p>
+    	    </div>
+    	</div>
+    	<div class="column-one-third dmspeak">
+    	    <h2 class="heading-xmedium">Account settings</h2>
+    	    <p>
+    	      <a href="/user/notifications/user-research" data-analytics="trackEvent" data-analytics-category="user-research" data-analytics-action="account-settings-link">Join the user research mailing list</a>
+    	    </p>
+    	</div>
+    </div>
+</main>
+
+{% endblock %}
+
+

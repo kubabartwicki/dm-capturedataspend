@@ -1,0 +1,329 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+#global-breadcrumb {
+  background-color: #fff;
+  max-width: 1020px;
+  margin: 0 auto;
+  z-index: 50;
+  nav ol {
+      max-width: 960px;
+      margin: 0 15px;
+      padding: 0.75em 0;
+  }
+  nav ol li {
+    font-family: "nta",Arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    background: url(/public/images/separator.png) 0% 50% no-repeat;
+    float: left;
+    list-style: none;
+    margin-right: 0.5em;
+    padding-left: 15px;
+    &:first-child {
+      background-image: none;
+      padding-left: 0;
+    }
+  }
+  nav ol li a {
+    color: #0b0c0c;
+  }
+}
+#global-header.with-proposition .header-wrapper {
+  .header-global .header-title {
+    float: left;
+    font-family: "nta",Arial,sans-serif;
+    font-weight: normal;
+    padding-top: 7px;
+    font-size: 24px;
+  }
+  .header-global .header-title a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .header-global .header-logo {
+    width: auto;
+  }
+  .header-global .phase-tag {
+    margin-left: 10px;
+    margin-top: 4px;
+    vertical-align: top;
+  }
+  .header-proposition #proposition-menu {
+    margin-top: 5px;
+  } 
+}
+.dmspeak .heading-xmedium, .error-page .heading-xmedium {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 1.11111;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+.dmspeak>h2:first-child, .error-page>h2:first-child, .dmspeak>h3:first-child, .error-page>h3:first-child {
+  margin-top: 0;
+}
+.summary-item-heading, .summary-item-heading-first {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 1.11111;
+  position: relative;
+  padding: 35px 25% 0 0;
+  margin: 0 0 10px 0;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.summary-item-field-headings-visible td, .summary-item-field-headings-visible th {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.14286;
+  border-top: 1px solid #bfc1c3;
+}
+.summary-item-field, .summary-item-field-first-half {
+  font-size: 14px;
+  line-height: 1.14286;
+}
+table.summary-item-body-no-bottom-border-text-large tbody td, table.summary-item-body-no-bottom-border-row-bold-borders-text-large tbody td, table.summary-item-body-no-bottom-border-row-bold-borders tbody td, table.summary-item-body-no-bottom-border tbody td, table.summary-item-body-row-bold-borders-text-large tbody td, table.summary-item-body-row-bold-borders tbody td, table.summary-item-body tbody td {
+  padding-top: 12px;
+  padding-bottom: 9px;
+  vertical-align: middle;
+}
+.summary-item-field-first-half {
+  width: 33.3%;
+  padding-right: 12px;
+}
+.summary-item-field .button {
+  margin-bottom: 4px;  
+}
+@media (min-width:641px) {
+  #global-breadcrumb {
+    nav ol {
+      margin: 0 30px;
+    }
+    nav ol li {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+  .dmspeak .heading-xmedium, .error-page .heading-xmedium {
+    font-size: 27px;
+    line-height: 1.11111;
+  }
+  .summary-item-heading, .summary-item-heading-first {
+    font-size: 27px;
+    line-height: 1.11111;
+  }
+  .summary-item-field-headings-visible td, .summary-item-field-headings-visible th, .summary-item-field, .summary-item-field-first-half {
+    font-size: 16px;
+    line-height: 1.25;
+    width: 33.3%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #global-header.with-proposition .header-wrapper {
+    .header-global {
+      width: 60%;
+    }
+    .header-proposition {
+      width: 40%;
+      text-align: right;
+      float: right;
+    }
+    .header-proposition #proposition-links {
+      float: right;
+    }
+  }
+}
+
+
+
+/* instruction list */
+.instruction-list-item-box {
+  border: 3px solid #6f777b;
+  font-weight: bold;
+  color: #6f777b;
+  padding: 0.5em 0.75em 0.33em 0.5em;
+  display: table;
+}
+.instruction-list-item-box {
+  font-family: "nta",Arial,sans-serif;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.14286;
+}
+.list-number, .instruction-list, .sublist {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.direct-award-project-overview-page .instruction-list {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 1.11111;
+}
+.instruction-list h2 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+.direct-award-project-overview-page .instruction-list-item h2 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 20px;
+  line-height: 1.11111;
+}
+.direct-award-project-overview-page .instruction-list-item h2 {
+  font-size: 27px;
+  line-height: 1.11111;
+}
+.instruction-list-item-box.complete {
+  border-color: #0b0c0c;
+  color: #0b0c0c;
+}
+
+.list-number li, .instruction-list li, .sublist li {
+  margin-bottom: 5px;
+}
+.divider {
+  padding: 20px 0 20px 0;
+  border-top: 1px solid #dee0e2;
+}
+.instruction-list .divider p {
+  margin-bottom: 0;
+}
+.search-summary em {
+  font-style: normal;
+  font-weight: bold;
+}
+li.instruction-list-item.divider:first-of-type {
+  padding-top: 0px;
+}
+.instruction-list .divider:first-child {
+  border-top: none;
+}
+.direct-award-project-overview-page .instruction-list-item .instruction-list-item-top {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  display: block;
+}
+.divider p.instruction-list-item-top, .divider a.instruction-list-item-action, .divider p.instruction-list-item-box {
+  margin-top: 1em;
+}
+@media (min-width: 641px) {
+  .instruction-list-item-box {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .instruction-list h2 {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+  .direct-award-project-overview-page .instruction-list {
+    font-size: 27px;
+    line-height: 1.11111;
+  }
+  .direct-award-project-overview-page .instruction-list-item .instruction-list-item-top {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+/* 
+custom stuff here
+(some above too)
+*/
+
+#search_ended_table {
+  padding-top: 0;
+}
+.return-to-overview {
+  margin-top: 20px;
+}
+.form-group--date, .form-group--text {
+  h3 em {
+    font-weight: bold;
+    font-style: normal;
+  }
+  h3 .form-hint {
+    padding: 0px 0 10px 0;
+  }
+  fieldset {
+    max-width: 300px;
+  }
+  .column-third {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 50px;
+    box-sizing: content-box;
+  }
+  .column-third:first-child {
+    padding-left: 0;
+  }
+  .column-third:last-child {
+    padding-right: 0;
+    max-width: 75px;
+  }
+  .form-control {
+    width: 100%;
+  }
+  &:nth-child(2), &:nth-child(3) {
+    margin-top: 30px;
+  }
+  .button--submit {
+    margin-top: 40px;
+  }
+}
+.alert-success {
+  border-color: #28a197;
+  background-color: #eaf6f5;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
