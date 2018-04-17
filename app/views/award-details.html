@@ -4,20 +4,18 @@
   Award details
 {% endblock %}
 
-{% block after_header %}
-<div id="global-breadcrumb" class="header-context">
-      <nav>
-        <ol class="group" role="breadcrumbs">
-            <li><a href="/">Digital Marketplace</a></li>
-            <li><a href="/">Your account</a></li>
-            <li><a href="/saved-searches">Your saved searches</a></li>
-            <li><a href="/search-summary">Buying some hosting</a></li>
-        </ol>
-      </nav>
-    </div>
-{% endblock %}
-
 {% block content %}
+
+<div id="global-breadcrumb" class="header-context">
+  <nav>
+    <ol class="group" role="breadcrumbs">
+        <li><a href="/">Digital Marketplace</a></li>
+        <li><a href="/">Your account</a></li>
+        <li><a href="/saved-searches">Your saved searches</a></li>
+        <li><a href="/search-summary">Buying some hosting</a></li>
+    </ol>
+  </nav>
+</div>
 
 <main id="content" role="main">
   <div class="grid-row">
@@ -79,6 +77,17 @@
             <label class="form-label" for="value">
               <em>What's the value?</em>
               <span class="form-hint">For example, 9900.95 for 9900 pounds and 95 pence</span>
+            </label>
+          </h3>
+          <fieldset class="">
+            <input class="form-control" id="value" name="value" type="number">
+          </fieldset>
+        </div>
+        <div class="form-group form-group--text">
+          <h3>
+            <label class="form-label" for="value">
+              <em>What's the buying organisation?</em>
+              <span class="form-hint">For example, Ministry of Justice</span>
             </label>
           </h3>
           <fieldset class="">

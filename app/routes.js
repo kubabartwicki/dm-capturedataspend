@@ -24,6 +24,7 @@ router.get('/saved-searches', function (req, res) {
   res.render('saved-searches')
 })
 router.get('/search-summary', function (req, res) {
+  var status = req.query.status
   res.render('search-summary')
 })
 router.get('/did-you-award', function (req, res) {
@@ -31,6 +32,9 @@ router.get('/did-you-award', function (req, res) {
 })
 router.get('/award-details', function (req, res) {
   res.render('award-details')
+})
+router.get('/why-not', function (req, res) {
+  res.render('why-not')
 })
 router.get('/award-info', function (req, res) {
   res.render('award-info')

@@ -4,26 +4,30 @@
   Search summary
 {% endblock %}
 
-{% block after_header %}
-<div id="global-breadcrumb" class="header-context">
-      <nav>
-        <ol class="group" role="breadcrumbs">
-            <li><a href="/">Digital Marketplace</a></li>
-            <li><a href="/">Your account</a></li>
-            <li><a href="/saved-searches">Your saved searches</a></li>
-        </ol>
-      </nav>
-    </div>
-{% endblock %}
-
 {% block content %}
+
+<div id="global-breadcrumb" class="header-context">
+  <nav>
+    <ol class="group" role="breadcrumbs">
+        <li><a href="/">Digital Marketplace</a></li>
+        <li><a href="/">Your account</a></li>
+        <li><a href="/saved-searches">Your saved searches</a></li>
+    </ol>
+  </nav>
+</div>
 
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
-      <div class="panel panel-border-wide alert-success">
-        Your outcome has been updated.
+    <div class="column-full">
+      {% if status == 'ongoing' %}
+      <div class="banner-success-without-action">
+          <p class="banner-message">
+            With plain text.
+          </p>
       </div>
+      {% endif %}
+    </div>
+    <div class="column-two-thirds">
       <h1 class="heading-xlarge">
         Buying some hosting
       </h1>
