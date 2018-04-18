@@ -19,7 +19,7 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-full">
-      {% if status == 'done' or status == 'ongoing' %}
+      {% if status == 'done' or status == 'ongoing' or status == 'notdone' %}
       <div class="banner-success-without-action">
           <p class="banner-message">
             We updated your outcome.
@@ -71,11 +71,17 @@
           <h2 class="instruction-list-item-body">Award a contract</h2>
           <p class="instruction-list-item-top"><a href="https://www.gov.uk/government/publications/g-cloud-9-call-off-contract" target="_blank" rel="external noopener noreferrer" data-analytics="trackEvent" data-analytics-category="Direct Award" data-analytics-action="External Link">Download the G-Cloud 9 call-off contract</a>.<br>Read about <a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services" target="_blank" rel="external noopener noreferrer" data-analytics="trackEvent" data-analytics-category="Direct Award" data-analytics-action="External Link">how to award a contract when you buy services</a>.</p>
           <p class="instruction-list-item-top">The buyer and supplier must both sign a copy of the contract before the service can be used.</p>
-          <!-- <p class="instruction-list-item-box complete">Contract awarded to Whatever</p> -->
-          <!-- <p class="instruction-list-item-box complete">Contract not awarded</p> -->
-          <p class="instruction-list-item-top">
+          {% if not status or status =='ongoing' %}
+            <p class="instruction-list-item-top">
             <a class="button" href="/did-you-award" role="button">Tell us the outcome</a>
           </p>
+          {% endif %}
+          {% if status == 'done' %}
+            <p class="instruction-list-item-box complete">Contract awarded</p>
+          {% endif %}
+          {% if status == 'notdone' %}
+            <p class="instruction-list-item-box complete">Contract not awarded</p>
+          {% endif %}
           
         </li>
       

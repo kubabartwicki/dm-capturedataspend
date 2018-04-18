@@ -12,7 +12,12 @@ router.post('/did-you-award', function (req, res) {
     res.redirect('/search-summary?status=ongoing')
   }
 })
-
+router.post('/why-not', function (req, res) {
+  res.redirect('/search-summary?status=notdone')
+})
+router.post('/award-details', function (req, res) {
+  res.redirect('/search-summary?status=done')
+})
 router.get('/', function (req, res) {
   res.render('index')
 })
