@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Did you award the contract? 
+  Did you award the contract?
 {% endblock %}
 
 {% block content %}
@@ -21,7 +21,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1 class="heading-xlarge">
-        Why did you not award the contract?
+        Why didn't you award a contract for Buying some hosting?
       </h1>
     </div>
   </div>
@@ -33,27 +33,34 @@
             <div class="multiple-choice">
               <input id="radio-1" type="radio" name="radiogroup2" value="yes">
               <label for="radio-1">
-                Yes
+                The work has been cancelled
+                <span class="form-hint">For example, because you no longer have the budget</span>
               </label>
             </div>
             <div class="multiple-choice">
               <input id="radio-2" type="radio" name="radiogroup2" value="no">
               <label for="radio-2">
-                No
+                There were no suitable services
+                <span class="form-hint">The services in your search results did not meet your requirements</span>
+              </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radiogroup2" value="no">
+              <label for="radio-3">
+                We used a different framework or route to market
+                <span class="form-hint">For example, Digital Outcomes and Specialists</span>
               </label>
             </div>
           </fieldset>
         </div>
-        <input type="submit" class="button" value="Continue">
+        <input type="submit" class="button" value="Submit">
       </form>
-      
+
       <p class="return-to-overview">
-        <a href="/search-summary">Return to overview</a>
-      </p> 
+        <a href="/did-you-award">Previous page</a>
+      </p>
     </div>
   </div>
 </main>
 
 {% endblock %}
-
-
