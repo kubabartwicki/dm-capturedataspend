@@ -79,8 +79,9 @@
           {% if status == 'done' %}
             <p class="instruction-list-item-box complete">Contract awarded</p>
           {% endif %}
+
           {% if status == 'notdone' %}
-            <p class="instruction-list-item-box complete">No contract awarded</p>
+            <p class="instruction-list-item-box complete">{{ data.radiogroup2 }}</p>
           {% endif %}
 
         </li>
