@@ -19,10 +19,17 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-full">
-      {% if status == 'done' or status == 'ongoing' or status == 'notdone' %}
+      {% if status == 'done' or status == 'notdone' %}
       <div class="banner-success-without-action">
           <p class="banner-message">
-            You’ve updated ‘Buying some hosting’
+            You’ve updated ‘Buying some hosting’.
+          </p>
+      </div>
+      {% elseif status == 'ongoing' %}
+      <div class="banner-success-without-action">
+          <p class="banner-message">
+            Your response for ‘Buying some hosting’ has been saved.<br/>
+            You still need to tell us the outcome when you’ve finished assessing services.
           </p>
       </div>
       {% endif %}
